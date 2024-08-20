@@ -1,0 +1,26 @@
+{
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "requireConfigFile": false,
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "babelOptions": {
+        "presets": ["@babel/preset-react"],
+        "plugins": ["@babel/plugin-proposal-decorators", {"legacy": true, "decoratorsBeforeExport": true}]
+      }
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/react-in-jsx-scope": "off"
+    }
+  }
