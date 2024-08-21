@@ -55,7 +55,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <h1>Let's Play</h1>
+        <h1>Play</h1>
         <h2 className={UserStore.result == "Winner" ? "winning" : "game-over"}>{UserStore.result}</h2>
         <form>
           <label>
@@ -68,7 +68,7 @@ class App extends React.Component {
             <button className="play-btn" onClick={this.onReset}>Reset</button>
           )
             : (
-              <button className="play-btn" onClick={this.startPlay}>Let's Play</button>
+              <button className="play-btn" onClick={this.startPlay}>Play</button>
             )
           }
         </form>
@@ -77,6 +77,7 @@ class App extends React.Component {
             <div className="point-board">
               {this.state.pointButton.map((pointButton) => (
                 <GameButton
+                  key={"id"}
                   pointButtonData={this.state.pointButton}
                   point={pointButton.point}
                   pointAmount={UserStore.pointAmountClicked}
@@ -91,4 +92,4 @@ class App extends React.Component {
     )
   }
 }
-export default App;
+export default observer(App);

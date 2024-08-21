@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.4",
     "customize-cra": "^1.0.0",
-    "eslint": "^9.9.0",
+    "eslint": "7.x",
     "eslint-loader": "^4.0.2",
     "mobx": "^5.15.4",
     "mobx-persist": "^0.4.1",
@@ -44,15 +44,19 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
     "@babel/plugin-proposal-decorators": "^7.24.7",
     "@babel/preset-env": "^7.25.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "babel-eslint": "^10.1.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-decorator-position": "^5.0.2",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-webpack-plugin": "^4.2.0",
     "prettier": "^3.3.3",
     "react-app-rewired": "^2.2.1",
     "react-dev-utils": "^10.2.1"

@@ -1,26 +1,30 @@
 {
-    "parser": "@babel/eslint-parser",
-    "parserOptions": {
-      "requireConfigFile": false,
-      "ecmaVersion": 2020,
-      "sourceType": "module",
-      "babelOptions": {
-        "presets": ["@babel/preset-react"],
-        "plugins": ["@babel/plugin-proposal-decorators", {"legacy": true, "decoratorsBeforeExport": true}]
-      }
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:prettier/recommended",
-      "prettier"
-    ],
-    "plugins": [
-      "react",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": "error",
-      "react/react-in-jsx-scope": "off"
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "babelOptions": {
+      "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }]
+      ]
     }
+  },
+  "plugins": [
+    "react",
+    "babel"
+  ],
+  "rules": {
+    "babel/new-cap": 1,
+    "babel/no-invalid-this": 1
   }
+}

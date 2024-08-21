@@ -2,6 +2,7 @@ import { observer } from "mobx-react";
 import UserStore from "../MobxStore/UserStore";
 import React from "react";
 import { toJS } from "mobx";
+import PropTypes from 'prop-types';
 
 function generateRandomId() {
     return `id-${Math.random().toString(36).substr(2, 9)}-${Date.now()}`;
@@ -59,4 +60,12 @@ class GameButton extends React.Component {
       )
     }
 }
+
+GameButton.propTypes = {
+    key: PropTypes.string.isRequired,
+    pointButtonData: PropTypes.array.isRequired,
+    point: PropTypes.number.isRequired,
+    pointAmount: PropTypes.number.isRequired,
+    resetClicking: PropTypes.string.isRequired
+};
 export default GameButton;
